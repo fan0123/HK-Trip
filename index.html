@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>深港三日游攻略 | 深圳欢乐谷+香港长洲岛+欢乐港湾/南头古城</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+            line-height: 1.4;
+            color: #333;
+            background: #f5f7fa;
+            font-size: 14px;
+        }
+        
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            padding: 0 0 20px 0;
+            background: white;
+        }
+        
+        /* 首页Hero区域 */
+        .hero-section {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.92) 0%, rgba(118, 75, 162, 0.92) 100%),
+                        url('https://sns-webpic-qc.xhscdn.com/202603222317/218c90a4358938ac8d3deee8d09ec3db/1040g2sg31n8s5horl00g49qksv7jel2gsflrn70!nc_n_webp_mw_1') center/cover no-repeat;
+            color: white;
+            padding: 50px 20px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section h1 {
+            font-size: 1.8em;
+            margin-bottom: 12px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-weight: 800;
+            background: linear-gradient(135deg, #fff 0%, #f0f0f0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-section .subtitle {
+            font-size: 0.95em;
+            margin-bottom: 20px;
+            opacity: 0.95;
+            font-weight: 300;
+            position: relative;
+            z-index: 1;
+            line-height: 1.5;
+        }
+        
+        .hero-section .highlights {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .highlight-item {
+            background: rgba(255,255,255,0.25);
+            backdrop-filter: blur(10px);
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 0.9em;
+            border: 1px solid rgba(255,255,255,0.3);
+            width: 100%;
+            max-width: 200px;
+        }
+        
+        /* 导航栏 - 非置顶 */
+        .nav-bar {
+            background: white;
+            padding: 15px 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+        
+        .nav-links {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+        }
+        
+        .nav-link {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px 8px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.8em;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .nav-link:active {
+            transform: scale(0.95);
+        }
+        
+        /* 天气卡片 */
+        .weather-card {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 20px;
+            margin: 15px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .weather-card h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+            text-align: center;
+        }
+        
+        .weather-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        
+        .weather-item {
+            background: rgba(255,255,255,0.95);
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+        
+        .weather-item .date {
+            font-size: 0.95em;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+        
+        .weather-item .weather {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+        
+        .weather-item .temp {
+            font-size: 1.1em;
+            color: #2c3e50;
+            font-weight: 600;
+            margin-bottom: 3px;
+        }
+        
+        .weather-item .tips {
+            font-size: 0.75em;
+            color: #7f8c8d;
+        }
+        
+        /* 卡片通用样式 */
+        .card {
+            background: white;
+            padding: 20px 15px;
+            margin: 15px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        
+        /* 日期标题 */
+        .day-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 15px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .day-header h2 {
+            font-size: 1.3em;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+        
+        .day-header p {
+            font-size: 0.85em;
+            opacity: 0.95;
+        }
+        
+        /* 时间轴 */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 25px;
+            padding-left: 25px;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: 5px;
+            width: 16px;
+            height: 16px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: 3px solid white;
+            border-radius: 50%;
+            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+        }
+        
+        .timeline-item .time {
+            color: #667eea;
+            font-size: 0.9em;
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            padding: 4px 12px;
+            border-radius: 15px;
+        }
+        
+        .timeline-item h3 {
+            color: #2c3e50;
+            margin-bottom: 8px;
+            font-size: 1em;
+            font-weight: 600;
+        }
+        
+        /* 信息框 */
+        .info-box {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf0 100%);
+            border-left: 4px solid #667eea;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 8px;
+            font-size: 0.85em;
+        }
+        
+        .warning-box {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffeeba 100%);
+            border-left: 4px solid #ffc107;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 8px;
+            font-size: 0.85em;
+        }
+        
+        .success-box {
+            background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+            border-left: 4px solid #28a745;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 8px;
+            font-size: 0.85em;
+        }
+        
+        /* 交通信息 */
+        .transport-info {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px;
+            border-radius: 10px;
+            margin: 10px 0;
+            font-size: 0.85em;
+        }
+        
+        .transport-info p {
+            margin: 5px 0;
+            font-size: 0.85em;
+        }
+        
+        .transport-info strong {
+            color: #fff;
+            font-weight: 600;
+        }
+        
+        /* 门票信息 */
+        .ticket-info {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+            padding: 12px;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+        
+        .ticket-info h3 {
+            font-size: 0.95em;
+            margin-bottom: 10px;
+            font-weight: 700;
+            text-align: center;
+        }
+        
+        .ticket-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+        }
+        
+        .ticket-item {
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            padding: 10px 6px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        
+        .ticket-price {
+            font-size: 1.3em;
+            font-weight: 800;
+            margin: 5px 0;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+        
+        .ticket-item p {
+            margin: 2px 0;
+            font-size: 0.8em;
+        }
+        
+        /* 图片画廊 - 移动端优化 */
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .photo-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+        
+        .photo-item img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .photo-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.85));
+            color: white;
+            padding: 20px 15px 12px;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+        
+        /* 美食推荐 */
+        .food-recommendations {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+            padding: 12px;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+        
+        .food-recommendations h4 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 0.95em;
+        }
+        
+        .food-item {
+            background: white;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            border-left: 3px solid #ff6b9d;
+        }
+        
+        .food-item p {
+            margin: 4px 0;
+            color: #2c3e50;
+            font-size: 0.85em;
+        }
+        
+        .food-item strong {
+            color: #ff6b9d;
+        }
+        
+        /* 提示区域 */
+        .tips-section {
+            background: linear-gradient(135deg, #e8f4f8 0%, #d4e9f7 100%);
+            padding: 12px;
+            border-radius: 10px;
+            margin: 10px 0;
+            border: 1px solid #b8dce8;
+        }
+        
+        /* 亮点展示框 */
+        .highlight-box {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .highlight-item-inline {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        
+        .highlight-item-inline .icon {
+            font-size: 2em;
+            flex-shrink: 0;
+            width: 40px;
+            text-align: center;
+        }
+        
+        .highlight-item-inline strong {
+            display: block;
+            color: #2c3e50;
+            font-size: 0.95em;
+            margin-bottom: 2px;
+        }
+        
+        .highlight-item-inline p {
+            margin: 0;
+            color: #666;
+            font-size: 0.8em;
+        }
+        
+        .tips-section h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.05em;
+            font-weight: 700;
+        }
+        
+        .tips-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .tips-list li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            font-size: 0.9em;
+        }
+        
+        .tips-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1em;
+        }
+        
+        /* FAQ卡片 */
+        .faq-item {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 18px;
+            margin: 15px 0;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            border-left: 4px solid #667eea;
+        }
+        
+        .faq-item h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1em;
+            font-weight: 700;
+        }
+        
+        .faq-item p {
+            color: #495057;
+            line-height: 1.3;
+            font-size: 0.9em;
+        }
+        
+        /* 页脚 */
+        footer {
+            background: rgba(0,0,0,0.9);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 0 0 15px 15px;
+            margin-top: 20px;
+        }
+        
+        footer p {
+            margin: 10px 0;
+            opacity: 0.9;
+            font-size: 0.85em;
+        }
+        
+        footer h3 {
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        /* 大图展示 */
+        .featured-image {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin: 15px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+            display: block;
+        }
+        
+        /* 主内容区图片区域 */
+        .section-gallery {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 15px;
+            box-shadow: inset 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .section-gallery h3 {
+            text-align: center;
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            font-weight: 700;
+        }
+        
+        /* 平滑滚动 */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* 链接样式 */
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            color: #764ba2;
+        }
+        
+        .ticket-info a {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        /* 列表样式 */
+        ul, ol {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        
+        li {
+            margin: 6px 0;
+            line-height: 1.3;
+            font-size: 0.9em;
+        }
+        
+        /* 段落 */
+        p {
+            margin: 10px 0;
+            line-height: 1.3;
+            font-size: 0.9em;
+        }
+        
+        /* 强调 */
+        strong {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <h1>🎡 深港三日游终极攻略</h1>
+            <p class="subtitle">深圳欢乐谷 → 香港长洲岛 → 欢乐港湾/南头古城 → 曼格海鲜自助</p>
+            <div class="highlights">
+                <div class="highlight-item">🎢 刺激项目一日游</div>
+                <div class="highlight-item">🏝️ 海岛慢生活体验</div>
+                <div class="highlight-item">🦞 海鲜自助大餐</div>
+                <div class="highlight-item">📸 绝美拍照打卡</div>
+            </div>
+        </div>
+
+        <!-- 导航栏 -->
+        <div class="nav-bar">
+            <div class="nav-links">
+                <a href="#day1" class="nav-link">📅 Day 1 欢乐谷</a>
+                <a href="#day2" class="nav-link">📅 Day 2 长洲岛</a>
+                <a href="#day3" class="nav-link">📅 Day 3 返程</a>
+                <a href="#preparation" class="nav-link">🎒 出行准备</a>
+                <a href="#faq" class="nav-link">❓ 常见问题</a>
+                <a href="#tips" class="nav-link">💡 实用贴士</a>
+            </div>
+        </div>
+
+        <!-- 天气预报 -->
+        <div class="weather-card">
+            <h2>🌤️ 清明假期天气预报（2026年4月4日-7日）</h2>
+            <div class="weather-grid">
+                <div class="weather-item">
+                    <div class="date">4月4日</div>
+                    <div class="weather">多云转阴</div>
+                    <div class="temp">20-27℃</div>
+                    <div class="tips">适宜出行</div>
+                </div>
+                <div class="weather-item">
+                    <div class="date">4月5日</div>
+                    <div class="weather">小雨</div>
+                    <div class="temp">21-28℃</div>
+                    <div class="tips">带伞出行</div>
+                </div>
+                <div class="weather-item">
+                    <div class="date">4月6日</div>
+                    <div class="weather">晴</div>
+                    <div class="temp">19-25℃</div>
+                    <div class="tips">天气绝佳</div>
+                </div>
+                <div class="weather-item">
+                    <div class="date">4月7日</div>
+                    <div class="weather">多云转晴</div>
+                    <div class="temp">19-25℃</div>
+                    <div class="tips">返程好天气</div>
+                </div>
+            </div>
+            <div class="info-box">
+                <p><strong>穿衣建议：</strong>薄外套+短袖（早晚温差大），防晒霜、墨镜必带！香港紫外线超强，室内空调很冷，洋葱式穿搭最佳。</p>
+            </div>
+        </div>
+
+        <!-- 出行准备 -->
+        <div class="card" id="preparation">
+            <div class="day-header">
+                <h2>🎒 出前准备清单</h2>
+            </div>
+            <div class="tips-section">
+                <h3>📋 必备证件</h3>
+                <ul class="tips-list">
+                    <li>港澳通行证 + 有效签注（务必提前检查！）</li>
+                    <li>身份证（深圳景点入园需要）</li>
+                    <li>学生证/教师证（部分景点有优惠）</li>
+                </ul>
+            </div>
+            
+            <div class="tips-section">
+                <h3>💰 支付准备</h3>
+                <ul class="tips-list">
+                    <li><strong>八达通：</strong>推荐旅客八达通卡（HK$39，不含储值，余额可退）</li>
+                    <li><strong>电子八达通：</strong>iPhone/Apple Watch用户可直接开通，无需押金</li>
+                    <li><strong>支付宝/微信：</strong>香港大部分商家支持，但小店只收现金</li>
+                    <li><strong>现金：</strong>准备100-200港币（岛上小吃店只收现金）</li>
+                    <li><strong>人民币：</strong>深圳消费</li>
+                </ul>
+            </div>
+            
+            <div class="tips-section">
+                <h3>📱 必备APP</h3>
+                <ul class="tips-list">
+                    <li><strong>八达通App：</strong>充值、查余额、退卡</li>
+                    <li><strong>深圳欢乐谷App：</strong>实时排队时间、地图导航</li>
+                    <li><strong>Citymapper / Google Maps：</strong>香港地铁导航</li>
+                    <li><strong>携程/美团：</strong>提前购票</li>
+                </ul>
+            </div>
+            
+            <div class="tips-section">
+                <h3>🎒 随身物品</h3>
+                <ul class="tips-list">
+                    <li>舒适运动鞋（每天2万步起步）</li>
+                    <li>充电宝（拍照超耗电）</li>
+                    <li>防晒霜、帽子、墨镜</li>
+                    <li>雨衣（玩水上项目用）</li>
+                    <li>小零食和水（园区物价偏高）</li>
+                    <li>湿纸巾、纸巾</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Day 1 深圳欢乐谷 -->
+        <div class="card" id="day1">
+            <div class="day-header">
+                <h2>📅 Day 1：深圳欢乐谷尖叫一日</h2>
+                <p>4月4日（周六）| 坪洲 → 欢乐谷 → 曼格海鲜自助 | 交通+游玩全攻略</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="time">09:00 - 10:00</div>
+                    <h3>🚇 从坪洲出发到欢乐谷</h3>
+                    <div class="transport-info">
+                        <p><strong>路线：</strong>坪洲站 → 地铁1号线（往罗湖方向）→ 世界之窗站A口</p>
+                        <p><strong>时长：</strong>约50分钟</p>
+                        <p><strong>费用：</strong>地铁票价约5元</p>
+                        <p><strong>温馨提示：</strong>出站步行3分钟即到欢乐谷大门，跟着人流走没错！</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="time">10:00 - 10:30</div>
+                    <h3>🎫 购票入园</h3>
+                    <div class="ticket-info">
+                        <h3>💰 深圳欢乐谷门票价格</h3>
+                        <div class="ticket-grid">
+                            <div class="ticket-item">
+                                <p>成人全天票</p>
+                                <div class="ticket-price">¥228</div>
+                                <p>原价¥260</p>
+                            </div>
+                            <div class="ticket-item">
+                                <p>青少年/学生票</p>
+                                <div class="ticket-price">¥180</div>
+                                <p>需持学生证</p>
+                            </div>
+                            <div class="ticket-item">
+                                <p>儿童/长者票</p>
+                                <div class="ticket-price">¥130</div>
+                                <p>1.2-1.5米儿童</p>
+                            </div>
+                            <div class="ticket-item">
+                                <p>夜场票</p>
+                                <div class="ticket-price">¥149</div>
+                                <p>16:00后入园</p>
+                            </div>
+                        </div>
+                        <p style="margin-top:15px;"><strong>🔗 购票链接：</strong><br>
+                        <a href="https://sz.happyvalley.cn/cms/frmticket.aspx" target="_blank" style="color:white; text-decoration:underline;">官方购票入口</a> | 
+                        携程/美团/飞猪（搜索"深圳欢乐谷"）</p>
+                        <p style="margin-top:10px;"><strong>免票政策：</strong>1.2米以下儿童、70岁以上长者免票</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="time">10:30 - 12:30</div>
+                    <h3>🎢 刺激项目第一波（避开人流高峰）</h3>
+                    <div class="success-box">
+                        <p><strong>必玩TOP3（按排队少到多）：</strong></p>
+                        <ol style="margin-left:20px; margin-top:10px;">
+                            <li><strong>落日飞车：</strong>高空旋转，特别爽！最适合情侣/朋友双人体验，俯瞰整个欢乐谷</li>
+                            <li><strong>勇士之锤：</strong>最恐怖项目之一，超长时间+超高空，下来后脑瓜子嗡嗡的，记得多喝水！</li>
+                            <li><strong>完美风暴：</strong>身体360度垂直旋转，刺激程度仅次于勇士之锤</li>
+                        </ol>
+                    </div>
+                    <div class="info-box">
+                        <p><strong>🎯 游玩技巧：</strong>开园直冲热门项目，先玩刺激的，人少排队快！下载"深圳欢乐谷"App实时查看排队时间。</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="time">12:30 - 13:30</div>
+                    <h3>🍽️ 午餐休息</h3>
+                    <div class="food-recommendations">
+                        <h4>园区内美食推荐：</h4>
+                        <div class="food-item">
+                            <p><strong>魔幻城堡区：</strong>儿童套餐+各种小吃</p>
+                        </div>
+                        <div class="food-item">
+                            <p><strong>西部矿镇：</strong>烧烤类+汉堡</p>
+                        </div>
+                        <p style="margin-top:10px;"><strong>💡 省钱技巧：</strong>自带零食和水，园区物价偏高（水8-10元/瓶）</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="time">13:30 - 16:00</div>
+                    <h3>🌊 水上项目+休闲项目</h3>
+                    <div class="warning-box">
+                        <p><strong>⚠️ 玩水上项目必备：</strong></p>
+                        <ul style="margin-left:20px; margin-top:10px;">
+                            <li>一次性雨衣（园区卖的较贵，建议自带）</li>
+                            <li>鞋套（防止鞋子湿透）</li>
+                            <li>防水手机袋（保护手机）</li>
+                        </ul>
+                    </div>
+                    <div class="success-box">
+                        <p><strong>推荐项目：</strong></p>
+                        <ul style="margin-left:20px; margin-top:10px;">
+                            <li><strong>金涛骇浪：</strong>W型水上过山车，从44米高空俯冲，水花超级大！</li>
+                            <li><strong>金矿漂流：</strong>温和不刺激，适合全家一起玩</li>
+                            <li><strong>幻影摩托：</strong>电磁弹射型摩托过山车，速度超级快，刺激程度和激流勇进差不多</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="time">16:00 - 18:00</div>
+                    <h3>📸 拍照打卡+休闲项目</h3>
+                    <div class="info-box">
+                        <p><strong>📸 出片打卡点：</strong></p>
+                        <ul style="margin-left:20px; margin-top:10px;">
+                            <li><strong>双层旋转木马（欢乐时光区）：</strong>夜晚亮灯+人工降雪，氛围感拉满！</li>
+                            <li><strong>巨型咖啡杯（魔幻城堡）：</strong>粉白配色，坐进杯子里拍照超可爱</li>
+                            <li><strong>复古电影海报墙（幻城街区）：</strong>假装"推荐电影"姿势，很有复古画报感</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="time">18:00 - 19:30</div>
+                    <h3>🚇 返回坪洲</h3>
+                    <div class="transport-info">
+                        <p><strong>路线：</strong>世界之窗站 → 地铁1号线 → 坪洲站</p>
+                        <p><strong>时长：</strong>约50分钟</p>
+                        <p><strong>末班车：</strong>地铁1号线往机场东方向末班车约23:00</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="time">19:30 - 20:30</div>
+                    <h3>🦞 曼格海鲜自助晚餐</h3>
+                    <div class="food-recommendations">
+                        <h4>🦞 曼格海鲜自助（宝安大仟里店）</h4>
+                        <div class="food-item">
+                            <p><strong>📍 地址：</strong>深圳市宝安区新安街道海城路大仟里购物中心3楼</p>
+                        </div>
+                        <div class="food-item">
+                            <p><strong>💰 价格：</strong>晚餐价约198-238元/人（以门店为准）</p>
+                        </div>
+                        <div class="food-item">
+                            <p><strong>🍤 特色：</strong>三文鱼、金枪鱼、帝王蟹、龙虾、鲍鱼、烤生蚝、各种甜点饮料</p>
+                        </div>
+                        <div class="food-item">
+                            <p><strong>⏰ 营业时间：</strong>17:00-21:30（晚餐）</p>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <p><strong>💡 预订建议：</strong>提前电话预约，节假日人很多！</p>
+                        <p><strong>🚇 交通：</strong>坪洲站 → 地铁1号线 → 坪洲站C口（步行约5分钟到大仟里）</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="time">20:30 - 21:00</div>
+                    <h3>🏠 返回住处休息</h3>
+                    <p>西乡站 → 地铁1号线 → 坪洲站（约10分钟），结束愉快的一天</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="time">💡 备注</div>
+                    <h3>⚠️ 调整说明</h3>
+                    <div class="warning-box">
+                        <p><strong>原计划调整：</strong>取消欢乐谷夜场表演+夜景，改为返回坪洲吃曼格海鲜自助晚餐</p>
+                        <p><strong>调整原因：</strong>欢乐谷夜场项目较为密集，体力消耗较大，提前返回用餐休息更合理</p>
+                    </div>
+                </div>
+                    <div class="success-box">
+                        <p><strong>必看表演：</strong></p>
+                        <ul style="margin-left:20px; margin-top:10px;">
+                            <li><strong>19:00 新春欢乐大巡游：</strong>花车巡游，演员颜值超高，跳舞特别好看</li>
+                            <li><strong>20:25 飞天奇幻大秀：</strong>大型演出，视觉效果震撼</li>
+                            <li><strong>20:35 非遗水上钢花：</strong>传统非遗表演，火树银花</li>
+                            <li><strong>20:45 千架无人机灯光秀：</strong>35万㎡炫彩光乐园，夜景随手拍大片</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="time">21:00 - 22:00</div>
+                    <h3>🚇 返回坪洲</h3>
+                    <div class="transport-info">
+                        <p><strong>路线：</strong>世界之窗站 → 地铁1号线 → 坪洲站</p>
+                        <p><strong>时长：</strong>约50分钟</p>
+                        <p><strong>末班车：</strong>地铁1号线往机场东方向末班车约23:00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tips-section">
+                <h3>🎯 深圳欢乐谷核心亮点</h3>
+                <div class="highlight-box">
+                    <div class="highlight-item-inline">
+                        <span class="icon">🎢</span>
+                        <div>
+                            <strong>刺激项目</strong>
+                            <p>勇士之锤、完美风暴、落日飞车</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item-inline">
+                        <span class="icon">🌊</span>
+                        <div>
+                            <strong>水上乐园</strong>
+                            <p>金涛骇浪、金矿漂流、幻影摩托</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item-inline">
+                        <span class="icon">🎆</span>
+                        <div>
+                            <strong>夜间表演</strong>
+                            <p>无人机灯光秀、非遗水上钢花</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item-inline">
+                        <span class="icon">📸</span>
+                        <div>
+                            <strong>打卡圣地</strong>
+                            <p>旋转木马、巨型咖啡杯、幻城街区</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tips-section">
+                <h3>💡 欢乐谷游玩小贴士</h3>
+                <ul class="tips-list">
+                    <li><strong>雨天福利：</strong>园内项目因降雨关停超过2小时，可凭身份证原件在两周内免费再玩一次！</li>
+                    <li><strong>储物柜：</strong>游客中心有储物柜，租金40元，中途只能开一次</li>
+                    <li><strong>安全问题：</strong>部分项目对身高、体重有限制，请遵守园区规定</li>
+                    <li><strong>最佳时段：</strong>错峰出行（工作日人少），开园第一时间入园直冲热门项目</li>
+                    <li><strong>省钱技巧：</strong>自带零食和水，园区物价偏高（水8-10元/瓶）</li>
+                    <li><strong>必备物品：</strong>一次性雨衣、鞋套、防水手机袋（玩水上项目必备）</li>
+                    <li><strong>预约建议：</strong>下载"深圳欢乐谷"App实时查看排队时间，合理安排游玩顺序</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Day 2 香港长洲岛 -->
+        <div class="card" id="day2">
+            <div class="day-header">
+                <h2>📅 Day 2：香港长洲岛海岛慢生活</h2>
+                <p>4月5日（周日）| 坪洲 → 香港长洲岛 | 交通+游玩全攻略</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="time">07:30 - 08:30</div>
+                    <h3>🚇 从坪洲到福田口岸</h3>
+                    <div class="transport-info">
+                        <p><strong>路线：</strong>坪洲站 → 地铁1号线 → 会展中心站 → 地铁4号线 → 福田口岸站</p>
+                        <p><strong>时长：</strong>约40分钟</p>
+                        <p><strong>费用：</strong>地铁票价约6元</p>
+                        <p><strong>温馨提示：</strong>早点出门！过关人多，建议8:30前到达口岸</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="time">08:30 - 09:30</div>
+                    <h3>🛂 福田口岸过关</h3>
+                    <div class="warning-box">
+                        <p><strong>⚠️ 过关必备：</strong></p>
+                        <ul style="margin-left:20px; margin-top:10px;">
+                            <li>港澳通行证 + 有效签注（务必提前检查！）</li>
+                            <li>黑色电子签注（自助过关）或 人工通道</li>
+                            <li>过关时间约15-30分钟（视人流情况）</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="time">09:30 - 10:30</div>
+                    <h3>🚇 从落马洲站到中环码头</h3>
+                    <div class="transport-info">
+                        <p><strong>路线：</strong></p>
+                        <ol style="margin-left:20px; margin-top:10px;">
+                            <li>落马洲站 → 东铁线（往金钟方向）→ 金钟站</li>
+                            <li>金钟站换乘 → 港岛线（往坚尼地城方向）→ 中环站</li>
+                            <li>中环站A出口出站，步行约10分钟到中环5号码头</li>
+                        </ol>
+                        <p><strong>时长：</strong>约50分钟</p>
+                        <p><strong>费用：</strong>港铁约HK$26.5</p>
+                        <p><strong>🚇 八达通：</strong>全程刷八达通，方便快捷！</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="time">10:30 - 11:00</div>
+                    <h3>🚢 中环码头乘船到长洲岛</h3>
+                    <div class="ticket-info">
+                        <h3>🎫 长洲岛渡轮信息</h3>
+                        <div class="ticket-grid">
+                            <div class="ticket-item">
+                                <p>高速船（快船）</p>
+                                <div class="ticket-price">HK$28.1</div>
+                                <p>约35分钟</p>
+                            </div>
+                            <div class="ticket-item">
+                                <p>普通船（慢船）</p>
+                                <div class="ticket-price">HK$14.2</div>
+                                <p>约55分钟</p>
+                            </div>
+                        </div>
+                        <p style="margin-top:15px;"><strong>💡 建议：</strong>去程坐快船省时间，回程坐慢船看夕阳，美滋滋！</p>
+                        <p><strong>📍 码头位置：</strong>中环5号码头（跟着"离岛渡轮"指示牌走）</p>
+                        <p><strong>💳 支付方式：</strong>八达通/现金（只收港币！）</p>
+                    </div>
+                    <div class="info-box">
+                        <p><strong>⏰ 班次频率：</strong></p>
+                        <ul style="margin-left:20px; margin-top:10px;">
+                            <li><strong>工作日：</strong>每30-60分钟一班</li>
+                            <li><strong>周末/节假日：</strong>每30-40分钟一班</li>
+                            <li><strong>首班：</strong>06:00（普通船）</li>
+                            <li><strong>末班：</strong>23:30（普通船）</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="time">11:00 - 12:00</div>
+                    <h3>🏝️ 抵达长洲岛+码头美食街</h3>
+                    <div class="food-recommendations">
+                        <h4>🍡 长洲岛必吃小吃（码头附近）：</h4>
+                        <div class="food-item">
+                            <p><strong>大鱼蛋：</strong>比乒乓球还大的鱼蛋！13港币/2粒，口味超全——沙嗲、咖喱、照烧、酸辣…QQ弹弹超入味</p>
+                        </div>
+                        <div class="food-item">
+                            <p><strong>平记糯米糍：</strong>芒果/榴莲馅料爆浆，皮薄到透明！25港币/个</p>
+                        </div>
+                        <div class="food-item">
+                            <p><strong>芒果糯米糍：</strong>现做现卖，芒果超新鲜，15港币/个</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="time">12:00 - 13:00</div>
+                    <h3>🍽️ 午餐+补充能量</h3>
+                    <div class="info-box">
+                        <p><strong>📍 午餐推荐：</strong></p>
+                        <ul style="margin-left:20px; margin-top:10px;">
+                            <li><strong>茶餐厅：</strong>港式茶餐厅，人均50-80港币</li>
+                            <li><strong>海鲜大排档：</strong>新鲜海鲜，人均100-150港币</li>
+                            <li><strong>粉面店：</strong>云吞面、牛腩面，人均30-50港币</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="time">13:00 - 15:00</div>
+                    <h3>🏖️ 东湾海滩+北眺亭</h3>
+                    <div class="success-box">
+                        <p><strong>🏖️ 东湾海滩：</strong>长洲岛最大的海滩，沙质细腻，海水清澈。适合游泳、晒太阳、玩水。</p>
+                        <p><strong>⛰️ 北眺亭：</strong>位于山顶，俯瞰整个长洲岛和周边海域，绝佳观景台！</p>
+                    </div>
+                    <div class="info-box">
+                        <p><strong>🚶‍♀️ 行走路线：</strong></p>
+                        <ol style="margin-left:20px; margin-top:10px;">
+                            <li>从码头步行约10分钟到东湾海滩</li>
+                            <li>在东湾海滩游玩30-40分钟</li>
+                            <li>步行约20分钟到北眺亭（上山路较陡）</li>
+                            <li>在北眺亭观景、拍照（停留20-30分钟）</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="time">15:00 - 17:00</div>
+                    <h3>🏛️ 历史文化探索</h3>
+                    <div class="success-box">
+                        <p><strong>必游景点：</strong></p>
+                        <ul style="margin-left:20px; margin-top:10px;">
+                            <li><strong>北帝庙：</strong>长洲岛最古老的庙宇，建于1783年，供奉北帝，建筑精美</li>
+                            <li><strong>长洲石刻：</strong>香港法定古迹，青铜时代晚期石刻，神秘图案</li>
+                            <li><strong>太平清醮场地：</strong>每年农历四月举行，是长洲岛最重要的传统节庆</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="time">17:00 - 18:00</div>
+                    <h3>🛍️ 逛小店+买手信</h3>
+                    <div class="info-box">
+                        <p><strong>🛍️ 逛店推荐：</strong></p>
+                        <ul style="margin-left:20px; margin-top:10px;">
+                            <li><strong>手工艺品店：</strong>手工制作的首饰、饰品，价格适中</li>
+                            <li><strong>海鲜干货店：</strong>海味干货，可以带回家</li>
+                            <li><strong>特色小吃店：</strong>长洲大鱼蛋、糯米糍、鱼蛋粉等</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="time">18:00 - 19:00</div>
+                    <h3>🍤 晚餐+海鲜大餐</h3>
+                    <div class="food-recommendations">
+                        <h4>🦞 长洲岛海鲜推荐：</h4>
+                        <div class="food-item">
+                            <p><strong>海鲜大排档：</strong>皮皮虾、濑尿虾、炒蟹、清蒸鱼，人均150-200港币</p>
+                        </div>
+                        <div class="food-item">
+                            <p><strong>海鲜餐厅：</strong>更精致的海鲜料理，人均200-300港币</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="time">19:00 - 20:00</div>
+                    <h3>🌅 码头看日落</h3>
+                    <div class="success-box">
+                        <p><strong>🌅 最佳观赏点：</strong>长洲岛码头，夕阳西下，海面波光粼粼，浪漫至极！</p>
+                        <p><strong>📸 拍照技巧：</strong>黄昏光线柔和，人像剪影效果超级赞！</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="time">20:00 - 21:30</div>
+                    <h3>🚢 乘船返回中环</h3>
+                    <div class="transport-info">
+                        <p><strong>路线：</strong>长洲岛码头 → 中环5号码头</p>
+                        <p><strong>时长：</strong>约55分钟（慢船）</p>
+                        <p><strong>费用：</strong>HK$14.2</p>
+                        <p><strong>💡 推荐：</strong>选择慢船，欣赏海上夜景，别有一番风味！</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="time">21:30 - 22:30</div>
+                    <h3>🚇 中环到落马洲</h3>
+                    <div class="transport-info">
+                        <p><strong>路线：</strong>中环站 → 港岛线 → 金钟站 → 东铁线 → 落马洲站</p>
+                        <p><strong>时长：</strong>约50分钟</p>
+                        <p><strong>费用：</strong>港铁约HK$26.5</p>
+                        <p><strong>⚠️ 注意：</strong>末班车时间，提前查询！</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="time">22:30 - 23:30</div>
+                    <h3>🛂 落马洲过关返回</h3>
+                    <div class="info-box">
+                        <p><strong>过关时间：</strong>约15-30分钟</p>
+                        <p><strong>⚠️ 注意：</strong>过关后乘坐地铁4号线返回坪洲</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tips-section">
+                <h3>🏝️ 长洲岛核心亮点</h3>
+                <div class="highlight-box">
+                    <div class="highlight-item-inline">
+                        <span class="icon">⛰️</span>
+                        <div>
+                            <strong>北眺亭</strong>
+                            <p>观海最佳位置，俯瞰全岛美景</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item-inline">
+                        <span class="icon">🏯</span>
+                        <div>
+                            <strong>北帝庙</strong>
+                            <p>200多年历史古建筑，感受香港文化</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item-inline">
+                        <span class="icon">🦀</span>
+                        <div>
+                            <strong>特色美食</strong>
+                            <p>大鱼蛋、芒果糯米糍、海鲜大排档</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item-inline">
+                        <span class="icon">🌅</span>
+                        <div>
+                            <strong>绝美日落</strong>
+                            <p>东湾沙滩，黄昏光线柔和适合拍照</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tips-section">
+                <h3>💡 长洲岛游玩小贴士</h3>
+                <ul class="tips-list">
+                    <li><strong>现金准备：</strong>岛上很多小店只收现金，务必准备100-200港币</li>
+                    <li><strong>穿着建议：</strong>穿舒适运动鞋，岛上很多上坡路</li>
+                    <li><strong>防晒措施：</strong>海岛紫外线强，带好防晒霜和帽子</li>
+                    <li><strong>八达通：</strong>乘船和坐地铁都可用八达通，方便快捷</li>
+                    <li><strong>返程时间：</strong>注意最后一班船时间，避免滞留</li>
+                    <li><strong>小贴士：</strong>岛上自行车租赁很方便，可以骑车环岛</li>
+                    <li><strong>美食推荐：</strong>张记鱼蛋、亚婆豆腐花、中环饼家</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Day 3 返程 -->
+        <div class="card" id="day3">
+            <div class="day-header">
+                <h2>📅 Day 3：返程自由活动</h2>
+                <p>4月6日（周一）| 欢乐港湾/南头古城 → 附近美食 | 自由安排</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="time">09:00 - 12:00</div>
+                    <h3>🌆 备选1：欢乐港湾（摩天轮）</h3>
+                    <div class="ticket-info">
+                        <h3>🎡 摩天轮票价</h3>
+                        <div class="ticket-grid">
+                            <div class="ticket-item">
+                                <p>成人票（平日）</p>
+                                <div class="ticket-price">¥150</div>
+                                <p>约30分钟</p>
+                            </div>
+                            <div class="ticket-item">
+                                <p>成人票（节假日）</p>
+                                <div class="ticket-price">¥180</div>
+                                <p>约30分钟</p>
+                            </div>
+                        </div>
+                        <p style="margin-top:15px;"><strong>📍 地址：</strong>深圳市宝安区新安街道兴华一路欢乐港湾</p>
+                        <p><strong>🚇 交通：</strong>地铁5号线临海站B2口，步行约5分钟</p>
+                    </div>
+                    <div class="info-box">
+                        <p><strong>📸 拍照打卡：</strong></p>
+                        <ul style="margin-left:20px; margin-top:10px;">
+                            <li><strong>摩天轮：</strong>深圳地标，白天和夜景都很美</li>
+                            <li><strong>海滨栈道：</strong>沿海边散步，吹海风，超惬意</li>
+                            <li><strong>商业区：</strong>购物、美食、咖啡厅一应俱全</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="time">09:00 - 12:00</div>
+                    <h3>🏛️ 备选2：南头古城</h3>
+                    <div class="success-box">
+                        <p><strong>🏛️ 南头古城亮点：</strong></p>
+                        <ul style="margin-left:20px; margin-top:10px;">
+                            <li><strong>历史古迹：</strong>深圳1697年历史的起点，古城墙、县衙、会馆</li>
+                            <li><strong>文创艺术：</strong>文艺小店、咖啡厅、艺术展览</li>
+                            <li><strong>美食探索：</strong>各地特色小吃、网红餐厅</li>
+                        </ul>
+                    </div>
+                    <div class="info-box">
+                        <p><strong>📍 地址：</strong>深圳市南山区南头街道深南大道与中山园路交汇处</p>
+                        <p><strong>🚇 交通：</strong>地铁12号线南头古城站C口，步行约10分钟</p>
+                        <p><strong>⏰ 开放时间：</strong>全天开放，展馆10:00-17:00（周一闭馆）</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="time">12:00 - 14:00</div>
+                    <h3>🍽️ 欢乐港湾附近美食</h3>
+                    <div class="food-recommendations">
+                        <h4>🍜 推荐美食</h4>
+                        <div class="food-item">
+                            <p><strong>📍 食悦轩：</strong>欢乐港湾购物中心4楼，粤菜精致，人均120元</p>
+                        </div>
+                        <div class="food-item">
+                            <p><strong>📍 喜茶/奈雪：</strong>欢乐港湾内，网红奶茶店，适合打卡</p>
+                        </div>
+                        <div class="food-item">
+                            <p><strong>📍 胖哥俩肉蟹煲：</strong>欢乐港湾购物中心，肉蟹煲人气很旺，人均90元</p>
+                        </div>
+                        <div class="food-item">
+                            <p><strong>📍 太二酸菜鱼：</strong>欢乐港湾购物中心，老坛酸菜鱼，人均80元</p>
+                        </div>
+                        <div class="food-item">
+                            <p><strong>📍 点都德：</strong>欢乐港湾区，广式早茶点心，人均100元</p>
+                        </div>
+                    </div>
+                    <div class="success-box">
+                        <p><strong>💡 美食选择建议：</strong>欢乐港湾购物中心餐厅很多，可根据喜好选择，建议提前避峰就餐</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="time">14:00 - 17:00</div>
+                    <h3>🛍️ 自由活动时间</h3>
+                    <div class="success-box">
+                        <p><strong>推荐活动：</strong></p>
+                        <ul style="margin-left:20px; margin-top:10px;">
+                            <li><strong>购物中心：</strong>前海壹方城、万象天地、KK ONE</li>
+                            <li><strong>咖啡厅休息：</strong>找一家舒适的咖啡厅，整理照片、写游记</li>
+                            <li><strong>书店逛逛：</strong>西西弗书店、茑屋书店</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="time">17:00 - 19:00</div>
+                    <h3>🍕 晚餐+收拾行李</h3>
+                    <p>可以继续在深圳享用美食，或者收拾行李准备返程</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="time">19:00 - 20:30</div>
+                    <h3>🚇 前往机场/高铁站</h3>
+                    <div class="transport-info">
+                        <p><strong>前往深圳宝安机场：</strong></p>
+                        <p>坪洲站 → 地铁1号线 → 前海湾站 → 地铁11号线 → 机场站（约45分钟）</p>
+                        <p><strong>前往深圳北站：</strong></p>
+                        <p>坪洲站 → 地铁1号线 → 会展中心站 → 地铁4号线 → 深圳北站（约40分钟）</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tips-section">
+                <h3>🌆 欢乐港湾/南头古城核心亮点</h3>
+                <div class="highlight-box">
+                    <div class="highlight-item-inline">
+                        <span class="icon">🎡</span>
+                        <div>
+                            <strong>欢乐港湾摩天轮</strong>
+                            <p>深圳地标，128米高，30分钟一圈</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item-inline">
+                        <span class="icon">🌊</span>
+                        <div>
+                            <strong>海滨栈道</strong>
+                            <p>海边散步，吹海风，享受悠闲时光</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item-inline">
+                        <span class="icon">🏛️</span>
+                        <div>
+                            <strong>南头古城</strong>
+                            <p>深圳1697年历史的起点，古城墙、县衙</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item-inline">
+                        <span class="icon">🎨</span>
+                        <div>
+                            <strong>文创艺术</strong>
+                            <p>文艺小店、咖啡厅、艺术展览</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tips-section">
+                <h3>💡 返程小贴士</h3>
+                <ul class="tips-list">
+                    <li><strong>交通提示：</strong>深圳宝安机场地铁11号线直达，深圳北站地铁4号线可达</li>
+                    <li><strong>美食推荐：</strong>欢乐港湾购物中心有食悦轩、喜茶、太二酸菜鱼、点都德等</li>
+                    <li><strong>购物推荐：</strong>前海壹方城、万象天地、KK ONE等大型购物中心</li>
+                    <li><strong>注意事项：</strong>提前预留足够时间前往机场/高铁站，避免误机</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- FAQ 常见问题 -->
+        <div class="card" id="faq">
+            <div class="day-header">
+                <h2>❓ 常见问题解答</h2>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Q: 清明假期人多吗？需要提前买票吗？</h3>
+                <p>A: 清明假期是旅游旺季，热门景点（深圳欢乐谷、长洲岛渡轮）人很多！强烈建议提前在官网或第三方平台购票，避免现场排队和售罄的情况。</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Q: 香港八达通卡怎么办理？</h3>
+                <p>A: 可以在香港的港铁站客务中心、7-Eleven便利店、OK便利店购买。成人卡HK$150（含HK$50押金+HK$100储值），退卡时扣除HK$11手续费，余额可退。iPhone/Apple Watch用户可直接开通电子八达通，无需实体卡。</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Q: 长洲岛上能刷支付宝/微信吗？</h3>
+                <p>A: 长洲岛上大部分小店只收现金！务必准备100-200港币现金。大型餐厅和超市可能支持支付宝/微信，但不能保证。建议现金为主，电子支付为辅。</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Q: 欢乐谷项目排队时间长吗？</h3>
+                <p>A: 清明假期人流大，热门项目排队可能需要1-2小时！建议下载"深圳欢乐谷"App实时查看排队时间，合理规划游玩路线。开园第一时间入园直冲热门项目，可以避开部分人流。</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Q: 香港天气怎么样？需要带什么衣服？</h3>
+                <p>A: 4月初香港天气温暖，白天温度20-28℃，早晚温差大。建议穿薄外套+短袖，洋葱式穿搭最佳。香港室内空调很冷，带件外套防止着凉。海岛紫外线强，防晒霜、墨镜必带！</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Q: 港澳通行证签注怎么办？</h3>
+                <p>A: 确保港澳通行证有效且签注在有效期内！如需办理，可以前往当地出入境大厅或通过"国家移民管理局"APP线上申请。建议提前1-2周办理，避免临时来不及。</p>
+            </div>
+        </div>
+
+        <!-- 实用贴士 -->
+        <div class="card" id="tips">
+            <div class="day-header">
+                <h2>💡 实用贴士</h2>
+            </div>
+            
+            <div class="tips-section">
+                <h3>💰 预算参考（人均）</h3>
+                <ul class="tips-list">
+                    <li><strong>深圳欢乐谷：</strong>门票¥228 + 园区餐饮¥50 = ¥278</li>
+                    <li><strong>香港长洲岛：</strong>交通¥80 + 渡轮¥28.1 + 餐饮¥150 = ¥258</li>
+                    <li><strong>欢乐港湾/南头古城：</strong>门票¥0-150 + 餐饮¥100 = ¥100-250</li>
+                    <li><strong>曼格海鲜自助：</strong>¥168-198</li>
+                    <li><strong>总计：</strong>约¥800-1000（不含住宿和往返深圳的交通费）</li>
+                </ul>
+            </div>
+            
+            <div class="tips-section">
+                <h3>📱 必备APP清单</h3>
+                <ul class="tips-list">
+                    <li><strong>深圳欢乐谷App：</strong>实时排队时间、地图导航</li>
+                    <li><strong>八达通App：</strong>充值、查余额、退卡</li>
+                    <li><strong>Citymapper / Google Maps：</strong>香港地铁导航</li>
+                    <li><strong>携程 / 美团：</strong>提前购票、订餐厅</li>
+                    <li><strong>天气通 / 墨迹天气：</strong>查看实时天气预报</li>
+                </ul>
+            </div>
+            
+            <div class="tips-section">
+                <h3>⚠️ 安全提醒</h3>
+                <ul class="tips-list">
+                    <li>保管好港澳通行证、身份证等证件，建议拍照备份</li>
+                    <li>香港室内空调温度低，带件外套防止着凉</li>
+                    <li>长洲岛海边注意安全，不要独自下海游泳</li>
+                    <li>游玩刺激项目时注意安全，遵守园区规定</li>
+                    <li>人多拥挤时注意财物安全，看好随身物品</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 页脚 -->
+        <footer>
+            <h3>🎡 祝您深港之旅愉快！</h3>
+            <p>本攻略仅供参考，实际行程请根据天气、人流情况灵活调整</p>
+            <p>如有疑问，欢迎咨询！</p>
+            <p>© 2026 深港三日游攻略 | 更新日期：2026年3月22日</p>
+        </footer>
+    </div>
+</body>
+</html>
